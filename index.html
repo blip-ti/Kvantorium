@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Расписание Кванториума</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Inter:wght@400;500;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="app-container">
+        <header>
+            <h1>Расписание Кванториума</h1>
+            <div class="date-navigator">
+                <button id="prev-date" class="nav-btn">←</button>
+                <div class="date-display">
+                    <span id="current-date-text">Сегодня, 3 февраля</span>
+                    <input type="date" id="date-picker">
+                </div>
+                <button id="next-date" class="nav-btn">→</button>
+            </div>
+        </header>
+
+        <main>
+            <div class="view-selector">
+                <button class="selector-btn active" data-view="rooms">Кабинет</button>
+                <button class="selector-btn" data-view="teachers">Преподаватель</button>
+                <button class="selector-btn" data-view="subjects">Предмет</button>
+            </div>
+
+            <div id="content-container" class="content-container fade-in">
+                <!-- Контент будет генерироваться здесь -->
+            </div>
+        </main>
+    </div>
+
+    <!-- Модальное окно или список выбора -->
+    <div id="selection-modal" class="modal hidden">
+        <div class="modal-content">
+            <button id="close-modal" class="close-btn">&times;</button>
+            <h2 id="modal-title">Выберите вариант</h2>
+            <div id="modal-list" class="item-grid"></div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
